@@ -10,7 +10,7 @@ use Illuminate\Validation\Rule;
 class RegisterRequest extends FormRequest
 {
     /**
-     * Determine if the user is authorized to make this request.
+     * Determine if user is authorized to make this request.
      */
     public function authorize(): bool
     {
@@ -18,7 +18,7 @@ class RegisterRequest extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to the request.
+     * Get validation rules that apply to the request.
      */
     public function rules(): array
     {
@@ -57,7 +57,7 @@ class RegisterRequest extends FormRequest
     }
 
     /**
-     * Prepare the data for validation.
+     * Prepare data for validation.
      */
     protected function prepareForValidation(): void
     {

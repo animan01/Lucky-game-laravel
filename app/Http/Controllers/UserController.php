@@ -17,14 +17,14 @@ class UserController extends Controller {
     ) {}
 
     /**
-     * Display the registration form.
+     * Registration form.
      */
     public function showRegisterForm(): View {
         return view('register');
     }
 
     /**
-     * Handle the user registration action.
+     * Handle user registration action.
      */
     public function register(RegisterRequest $request): RedirectResponse {
         $uniqueLink = $this->userService->registerUser(
@@ -44,7 +44,7 @@ class UserController extends Controller {
     }
 
     /**
-     * Deactivate the user's current link.
+     * Deactivate user's current link.
      */
     public function deactivateLink(string $userId): RedirectResponse {
         $this->userService->deactivateLink($userId);

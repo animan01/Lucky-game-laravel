@@ -15,7 +15,7 @@ class GameService
     private const HISTORY_LIMIT = 3;
 
     /**
-     * Play the game for a user.
+     * Play game for a user.
      *
      * @throws InvalidArgumentException
      */

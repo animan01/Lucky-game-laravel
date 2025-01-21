@@ -18,7 +18,7 @@ class GameController extends Controller {
     ) {}
 
     /**
-     * Display the main game view with user info, history, and last result.
+     * Main game view.
      */
     public function show(string $link): View|RedirectResponse {
         $user = $this->userService->getUserByLink($link);
@@ -28,10 +28,10 @@ class GameController extends Controller {
                 ->with('error', 'Invalid or expired link');
         }
 
-        // Fetch last 3 games for the user.
+        // Fetch last 3 games for user.
         $history = $this->gameService->getHistory((string) $user->id);
 
-        // If you stored the game result in the session, retrieve it
+        // If you stored game result in the session, retrieve it
         // (e.g. from the play() method below).
         $result = session('result');
 
@@ -39,7 +39,7 @@ class GameController extends Controller {
     }
 
     /**
-     * Handle the game play action.
+     * Handle game play action.
      */
     public function play(string $userId): RedirectResponse {
         $result = $this->gameService->play($userId);
