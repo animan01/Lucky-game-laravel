@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('cache', function ($table) {
+        Schema::create('cache_test', function ($table) {
             $table->string('key')->unique();
             $table->text('value');
             $table->integer('expiration');
