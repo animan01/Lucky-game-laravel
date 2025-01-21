@@ -76,10 +76,10 @@ class GameService
         }
 
         return match (true) {
-            $number > 900 => $number * 0.7, // 70% for numbers > 900
-            $number > 600 => $number * 0.5, // 50% for numbers > 600
-            $number > 300 => $number * 0.3, // 30% for numbers > 300
-            default => $number * 0.1,       // 10% for numbers <= 300
+            $number > 900 => $number * 0.7,
+            $number > 600 => $number * 0.5,
+            $number > 300 => $number * 0.3,
+            default => $number * 0.1,
         };
     }
 }
