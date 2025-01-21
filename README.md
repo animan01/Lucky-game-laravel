@@ -1,3 +1,7 @@
+# Preview
+![Kapture 2025-01-21 at 09 43 42](https://github.com/user-attachments/assets/b39d9975-1dc4-4e4f-9cb3-34f9f8cb5bf2)
+
+
 # Lucky Game
 
 A simple web-based game built with Laravel 11, PostgreSQL, and Redis.
